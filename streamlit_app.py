@@ -35,7 +35,7 @@ if username == "ClecoDC" and password == "Regulatory" and api_key:
         try:
             thread = openai.beta.threads.create()
             message = openai.beta.threads.messages.create(thread_id=thread.id, role="user", content=content)
-            assistant_id = "asst_PJzdjZtWBpZYtgA7JtF5Pynp"  # Fixed assistant ID
+            assistant_id = "asst_E0EJr7FsiyEmNTO1lk1BVfUC"  # Fixed assistant ID
             run = openai.beta.threads.runs.create(thread_id=thread.id, assistant_id=assistant_id)
             run = wait_on_run(run.id, thread.id)
             messages = openai.beta.threads.messages.list(thread.id)
